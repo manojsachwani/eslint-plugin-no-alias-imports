@@ -39,8 +39,17 @@ jobs:
           # Extract version from release tag (remove 'v' prefix if present)
           VERSION=${GITHUB_REF#refs/tags/}
           VERSION=${VERSION#v}
-          npm version $VERSION --no-git-tag-version
-          echo "Updated package.json to version $VERSION"
+          CURRENT_VERSION=$(node -p "require('./package.json').version")
+
+          echo "Tag version: $VERSION"
+          echo "Current package.json version: $CURRENT_VERSION"
+
+          if [ "$VERSION" != "$CURRENT_VERSION" ]; then
+            echo "Updating package.json version from $CURRENT_VERSION to $VERSION"
+            npm version $VERSION --no-git-tag-version
+          else
+            echo "Version $VERSION already matches package.json, skipping update"
+          fi
 
       - name: Verify package contents
         run: npm pack --dry-run
