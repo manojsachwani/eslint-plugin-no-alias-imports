@@ -7,6 +7,7 @@ jest.config.json
 
 # Documentation (keep README.md)
 DOC.md
+PUBLISHING.md
 
 # Node modules and logs
 node_modules/
