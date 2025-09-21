@@ -90,6 +90,42 @@ An array of regex patterns to match against import paths.
 }
 ```
 
+#### `allowlist` (Array)
+
+An array of specific alias paths to allow (exceptions to the rule). Supports exact matches, prefix matches, and wildcard patterns.
+
+**Default:** `[]`
+
+**Examples:**
+
+```javascript
+{
+  "no-alias-imports/no-alias-imports": ["error", {
+    "aliases": ["@", "~"],
+    "allowlist": [
+      // Exact match
+      "@/types",
+
+      // Prefix match - allows @/config and @/config/anything
+      "@/config",
+
+      // Wildcard pattern - allows @/constants/anything
+      "@/constants/*",
+
+      // Multiple allowed paths
+      "~/shared",
+      "@/api/types"
+    ]
+  }]
+}
+
+// With this config:
+import types from "@/types";           // ✅ Allowed (in allowlist)
+import config from "@/config/app";     // ✅ Allowed (prefix match)
+import constants from "@/constants/ui"; // ✅ Allowed (wildcard match)
+import utils from "@/utils";           // ❌ Flagged (not in allowlist)
+```
+
 ## Examples
 
 ### What gets flagged (❌)

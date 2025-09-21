@@ -57,6 +57,28 @@ ruleTester.run("no-alias-imports", rule, {
       code: "import foo from 'lib/foo';",
       options: [{ patterns: ["^@/"] }],
     },
+
+    // Allowlist configuration - these should be allowed even though they match aliases
+    {
+      code: "import types from '@/types';",
+      options: [{ aliases: ["@"], allowlist: ["@/types"] }],
+    },
+    {
+      code: "import config from '@/config/app';",
+      options: [{ aliases: ["@"], allowlist: ["@/config"] }],
+    },
+    {
+      code: "import constants from '@/constants/ui';",
+      options: [{ aliases: ["@"], allowlist: ["@/constants/*"] }],
+    },
+    {
+      code: "const shared = require('~/shared/utils');",
+      options: [{ aliases: ["~"], allowlist: ["~/shared"] }],
+    },
+    {
+      code: "export { api } from '@/api/types';",
+      options: [{ aliases: ["@"], allowlist: ["@/api/types"] }],
+    },
   ],
 
   invalid: [
