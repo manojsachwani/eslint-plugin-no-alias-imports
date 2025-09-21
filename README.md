@@ -260,9 +260,50 @@ MIT
 
 ## Changelog
 
+### 1.0.3 (2025-09-21)
+
+#### Added
+
+- Automated CI/CD pipeline with GitHub Actions
+- Automated npm publishing on release creation or tag push
+- Comprehensive test coverage reporting
+- Enhanced package scripts for development workflow
+- Detailed publishing and release documentation
+
+#### Changed
+
+- Improved package.json with proper lifecycle hooks
+- Enhanced development scripts (`test:coverage`, `prepublishOnly`, etc.)
+- Updated package exclusions via .npmignore
+
+#### Infrastructure
+
+- Added GitHub Actions workflow for continuous integration
+- Added automated release workflow supporting both GitHub releases and tag-based publishing
+- Added npm provenance for enhanced security
+- Multi-Node.js version testing (16.x, 18.x, 20.x)
+
+### 1.0.2
+
+#### Fixed
+
+- Minor bug fixes and stability improvements
+- Enhanced error messaging
+
+### 1.0.1
+
+#### Fixed
+
+- Documentation improvements
+- Package metadata updates
+
 ### 1.0.0
+
+#### Added
 
 - Initial release
 - Support for ES6 imports/exports, CommonJS requires, and dynamic imports
 - Configurable alias prefixes and regex patterns
 - Comprehensive test suite
+- TypeScript support
+- Recommended ESLint configuration
