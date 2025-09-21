@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-no-alias-imports",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "ESLint plugin to flag alias imports in JavaScript/TypeScript files",
   "main": "lib/index.js",
   "keywords": [
@@ -11,7 +11,7 @@
     "typescript",
     "javascript"
   ],
-  "author": "",
+  "author": "Manoj Sachwani",
   "license": "MIT",
   "engines": {
     "node": ">=12.0.0"
