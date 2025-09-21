@@ -1,0 +1,7 @@
+# eslint-plugin-no-alias-imports
+
+node_modules/
+*.log
+.DS_Store
+coverage/
+.nyc_output/

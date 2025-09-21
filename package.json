@@ -1,0 +1,44 @@
+{
+  "name": "eslint-plugin-no-alias-imports",
+  "version": "1.0.0",
+  "description": "ESLint plugin to flag alias imports in JavaScript/TypeScript files",
+  "main": "lib/index.js",
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "import",
+    "alias",
+    "typescript",
+    "javascript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0",
+    "@typescript-eslint/parser": "^6.0.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint lib/**/*.js tests/**/*.js",
+    "lint:fix": "eslint lib/**/*.js tests/**/*.js --fix"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/eslint-plugin-no-alias-imports.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/eslint-plugin-no-alias-imports/issues"
+  },
+  "homepage": "https://github.com/your-username/eslint-plugin-no-alias-imports#readme"
+}
