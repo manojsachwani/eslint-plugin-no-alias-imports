@@ -296,6 +296,33 @@ MIT
 
 ## Changelog
 
+### 1.0.9 (2025-09-21)
+
+#### Added
+
+- **Allowlist functionality**: New `allowlist` configuration option to specify exceptions to the rule
+- Support for exact match, prefix match, and wildcard pattern exceptions
+- Comprehensive test coverage for allowlist functionality
+- Enhanced documentation with allowlist examples and usage patterns
+
+#### Changed
+
+- Improved rule logic to handle exceptions more efficiently
+- Enhanced configuration schema to support allowlist option
+- Updated README with detailed allowlist documentation
+
+#### Infrastructure
+
+- Added extensive test cases for allowlist functionality
+- Enhanced rule validation and error handling
+
+### 1.0.8 (2025-09-21)
+
+#### Fixed
+
+- Minor improvements to rule implementation
+- Enhanced error handling and validation
+
 ### 1.0.7 (2025-09-21)
 
 #### Fixed
