@@ -30,16 +30,30 @@ This guide explains how to publish your ESLint plugin to npm using GitHub Action
 
 ### Automated Publishing (Recommended)
 
-The repository is configured with GitHub Actions that automatically publish to npm when you create a release.
+The repository is configured with GitHub Actions that automatically publish to npm when you create a release or push a version tag.
 
-#### Step 1: Prepare for Release
+#### Method 1: Tag-Based Publishing (Quickest)
 
-1. Ensure all changes are committed and pushed to the `main` branch
+1. Ensure all changes are committed and pushed to the `master` branch
+2. Verify tests pass: `npm test`
+3. Verify linting passes: `npm run lint`
+4. Create and push a version tag:
+   ```bash
+   git tag v1.0.1  # Use semantic versioning
+   git push origin master --tags
+   ```
+5. GitHub Actions will automatically publish to npm
+
+#### Method 2: GitHub Release Publishing
+
+##### Step 1: Prepare for Release
+
+1. Ensure all changes are committed and pushed to the `master` branch
 2. Verify tests pass: `npm test`
 3. Verify linting passes: `npm run lint`
 4. Test package locally: `npm pack` (optional)
 
-#### Step 2: Create a GitHub Release
+##### Step 2: Create a GitHub Release
 
 1. Go to your GitHub repository
 2. Click on "Releases" in the right sidebar
@@ -53,7 +67,7 @@ The repository is configured with GitHub Actions that automatically publish to n
 6. Write release notes describing what changed
 7. Click "Publish release"
 
-#### Step 3: Monitor the Release
+##### Step 3: Monitor the Release
 
 1. Go to Actions tab in your repository
 2. Watch the "Release and Publish" workflow
