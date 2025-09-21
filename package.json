@@ -27,18 +27,22 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "lint": "eslint lib/**/*.js tests/**/*.js",
-    "lint:fix": "eslint lib/**/*.js tests/**/*.js --fix"
+    "lint:fix": "eslint lib/**/*.js tests/**/*.js --fix",
+    "prepublishOnly": "npm run lint && npm run test",
+    "prepack": "npm run lint && npm run test",
+    "version": "npm run lint && npm run test"
   },
   "files": [
     "lib"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/eslint-plugin-no-alias-imports.git"
+    "url": "https://github.com/manojsachwani/eslint-plugin-no-alias-imports"
   },
   "bugs": {
-    "url": "https://github.com/your-username/eslint-plugin-no-alias-imports/issues"
+    "url": "https://github.com/manojsachwani/eslint-plugin-no-alias-imports/issues"
   },
-  "homepage": "https://github.com/your-username/eslint-plugin-no-alias-imports#readme"
+  "homepage": "https://github.com/manojsachwani/eslint-plugin-no-alias-imports#readme"
 }
