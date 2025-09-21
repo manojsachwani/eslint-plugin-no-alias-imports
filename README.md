@@ -260,6 +260,40 @@ MIT
 
 ## Changelog
 
+### 1.0.7 (2025-09-21)
+
+#### Fixed
+- Resolved GitHub Actions deployment permission errors
+- Fixed release workflow version conflict handling
+- Improved release workflow robustness and error handling
+
+#### Changed
+- Removed problematic GitHub deployment step from release workflow
+- Enhanced release workflow with better version checking logic
+- Added informative success messages after npm publication
+
+#### Infrastructure
+- Streamlined automated release process
+- Enhanced workflow reliability and error recovery
+
+### 1.0.6 (2025-09-21)
+
+#### Fixed
+- Improved release workflow stability
+- Enhanced error handling in CI/CD pipeline
+
+### 1.0.5 (2025-09-21)
+
+#### Fixed
+- Resolved npm version update conflicts in release workflow
+- Enhanced version checking logic to prevent "Version not changed" errors
+
+### 1.0.4 (2025-09-21)
+
+#### Fixed
+- Release workflow improvements and bug fixes
+- Enhanced GitHub Actions configuration
+
 ### 1.0.3 (2025-09-21)
 
 #### Added
